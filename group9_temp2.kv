@@ -1,0 +1,53 @@
+<main_window>:
+    id: timer
+    cols: 4
+    rows: 3
+
+#    canvas.before:
+#        Rectangle:
+#            pos: self.pos
+#            size: self.size
+#            source: 'nicthedic2.jpg'
+
+    Label:
+        text: "Current Time:"
+        color: 1,0,0,1
+    Label:
+        id: ctime
+        text: str(timer.time)
+        color: 1,0,0,1
+    Label:
+        text: "Prediction Time:"
+        color: 1,0,0,1
+    Label:
+        id: ptime
+        text: 'Waiting...'
+        color: 1,0,0,1
+    Label:
+        text: "Temperature Reading:"
+        color: 1,0,0,1
+    Label:
+        id: ctemp
+        text: ''
+        color: 1,0,0,1
+    Label:
+        text: "Predicted Temperature:"
+        color: 1,0,0,1
+    Label:
+        id: ptemp
+        text: ''
+        color: 1,0,0,1
+    Button:
+        id: start
+        text: 'Start'
+        on_release: timer.start()
+    Button:
+        id: stop
+        text: 'Stop'
+        on_release: timer.stop()
+    Button:
+        id: close
+        text: 'Close App'
+        on_release: timer.close()
+
+
